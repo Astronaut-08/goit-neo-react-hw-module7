@@ -11,7 +11,7 @@ const SearchBox = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(changeFilter(''))
-    })
+    }, [dispatch])
 
     return (
         <div className={style['search-container']}>

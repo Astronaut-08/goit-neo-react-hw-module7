@@ -5,7 +5,7 @@ const initialState = {
     name: ''
 }
 
-const contactsSlice = createSlice({
+const filtersSlice = createSlice({
     name: 'filters',
     initialState,
     reducers: {
@@ -15,5 +15,8 @@ const contactsSlice = createSlice({
     }
 })
 
-export const {changeFilter} = contactsSlice.actions
-export default contactsSlice.reducer
+export const {changeFilter} = filtersSlice.actions
+export default filtersSlice.reducer
+
+// Selectors
+export const selectNameFilter = (state) => state.filters.name
